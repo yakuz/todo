@@ -1,0 +1,18 @@
+<ul class="todo__list list-group">
+  <li
+    class="todo__item list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let task of tasks; let i = index;"
+    [ngClass]="{'todo__item--completed': task.completed}"
+  >
+    <div
+      class="todo__label d-flex align-items-center cursor-pointer"
+      (click)="onCompletedTask(i)"
+    >
+      <span class="fa fa-check-circle-o mr-2 todo__check"></span>
+      <span class="todo__title">{{ task.name }}</span>
+    </div>
+    <span>
+      <a href="javascript:void(0)" class="fa fa-trash" (click)="onRemoveTask(i)"></a>
+    </span>
+  </li>
+</ul>
