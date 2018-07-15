@@ -8,11 +8,11 @@
       class="todo__label d-flex align-items-center cursor-pointer"
       (click)="onCompletedTask(i)"
     >
-      <span class="fa fa-check-circle-o mr-2 todo__check"></span>
+      <span class="far fa-check-circle mr-2 todo__check"></span>
       <span class="todo__title">{{ task.name }}</span>
     </div>
     <span>
-      <a href="javascript:void(0)" class="fa fa-trash" (click)="onRemoveTask(i)"></a>
+      <a href="javascript:void(0)" class="far fa-trash-alt text-danger" (click)="onRemoveTask(i)"></a>
     </span>
   </li>
 </ul>

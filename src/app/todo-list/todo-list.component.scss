@@ -1,0 +1,22 @@
+.todo {
+  &__check {
+    color: rgba(#000,.2);
+    font-size: 1.8rem;
+  }
+  &__item {
+    .todo__label:hover {
+      .todo__check {
+        color: rgba(#57dc66,.5);
+      }
+    }
+    &--completed {
+      .todo__title {
+        opacity: .2;
+        text-decoration: line-through;
+      }
+      .todo__check {
+        color: #57dc66;
+      }
+    }
+  }
+}
